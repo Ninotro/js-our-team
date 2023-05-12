@@ -41,17 +41,29 @@ const collaboratori = [
 
 ]
 
-
+const divCollaboratori = document.getElementById("figurine-collaboratori")
 
 for (i=0; i < collaboratori.length ; i++ ) {
     let collaboratoreIesimo = collaboratori[i]
     // console.log(collaboratoreIesimo);
-   
-
-    for (let key in collaboratoreIesimo) {
+        const containerFigurina = document.createElement("div")
+        divCollaboratori.append(containerFigurina)
+        const name = document.createElement("div");
+    
+        name.append(collaboratoreIesimo.nome);
         
-       console.log(collaboratoreIesimo[key]);
-        document.getElementById("collaboratori").innerHTML = "" + collaboratoreIesimo.toString() 
+        const role = document.createElement("div")
+        role.append(collaboratoreIesimo.ruolo)
+       
+    
+        
+        const immage = document.createElement("div")
+        immage.append(collaboratoreIesimo.immagine)
+        
+        containerFigurina.append(name,role,immage)
 
-    }
+        containerFigurina.classList.add("square")
+    
+
+    
 }
