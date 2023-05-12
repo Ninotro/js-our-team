@@ -1,10 +1,6 @@
-// Wayne Barnett	Founder & CEO	wayne-barnett-founder-ceo.jpg
-// Angela Caroll	Chief Editor	angela-caroll-chief-editor.jpg
-// Walter Gordon	Office Manager	walter-gordon-office-manager.jpg
-// Angela Lopez	Social Media Manager	angela-lopez-social-media-manager.jpg
-// Scott Estrada	Developer	scott-estrada-developer.jpg
-// Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
 
+
+// creo l'array di oggetti dei collaboratori
 const collaboratori = [
     {
     "nome" : "Wayne Barnett" ,
@@ -45,4 +41,17 @@ const collaboratori = [
 
 ]
 
-console.log(collaboratori);
+
+
+for (i=0; i < collaboratori.length ; i++ ) {
+    let collaboratoreIesimo = collaboratori[i]
+    // console.log(collaboratoreIesimo);
+   
+
+    for (let key in collaboratoreIesimo) {
+        
+       console.log(collaboratoreIesimo[key]);
+        document.getElementById("collaboratori").innerHTML = "" + collaboratoreIesimo.toString() 
+
+    }
+}
